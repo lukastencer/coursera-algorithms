@@ -2,6 +2,19 @@ class arrstack:
     
     arr = [None]*2
     N = 0
+    iterIdx = None
+    
+    def __iter__(self):
+        self.iterIdx=self.N
+        return self
+    
+    def next(self):
+        
+        if self.N < 0:
+            raise StopIteration
+        data = self.arr[self.N]
+        self.N -= 1
+        return data
     
     def push(self,inVal):
         arrLen = len(self.arr)

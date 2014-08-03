@@ -9,8 +9,21 @@ class llstack:
                     
             self.next = nextNode
             self.val = val
-        
+    
     head = None
+    iterIdx = None
+    
+    def __iter__(self):
+        self.iterIdx=self.head
+        return self
+    
+    def next(self):
+        
+        if self.iterIdx == None:
+            raise StopIteration
+        data = self.iterIdx.val
+        self.iterIdx = self.iterIdx.next
+        return data
     
     def push(self,inVal):
         

@@ -27,3 +27,6 @@ arrs.pop()
 arrs.pop()
 
 arrs.show()
+
+for elem in arrs:
+    print 'iter:', elem

@@ -14,3 +14,6 @@ llq.pop()
 llq.pop()
 llq.push('fish')
 llq.show()
+
+for elem in llq:
+    print 'iter:', elem

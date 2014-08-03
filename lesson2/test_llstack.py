@@ -14,3 +14,6 @@ lls.pop()
 lls.pop()
 lls.push('fish')
 lls.show()
+
+for elem in lls:
+    print 'iter:', elem
