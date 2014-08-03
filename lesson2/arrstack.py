@@ -36,8 +36,8 @@ class arrstack:
             newarr = self.arr[0:int((arrLen-1)/2)]
             self.arr = newarr
         
-        res = self.arr[self.N]
-        self.arr[self.N] = None
+        res = self.arr[self.N-1]
+        self.arr[self.N-1] = None
         self.N -= 1
         return res
     
