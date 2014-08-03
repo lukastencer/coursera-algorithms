@@ -14,5 +14,6 @@ class triple:
             for j in inArray:
                 diff = -(i+j)
                 if not self.bs.search(inArray, diff) == -1:
-                    res.add(tuple(sorted([i,j,diff])))
+                    if not diff in [i,j]:
+                        res.add(tuple(sorted([i,j,diff])))
         return res
