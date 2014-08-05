@@ -38,6 +38,23 @@ class llstack:
         self.head = self.head.next;
         return item
     
+    def top(self):
+        return self.head.val
+    
+    def peek(self):
+        return self.head.val
+    
+    def toList(self):
+        res = []
+        
+        tempP = self.head
+        
+        while not tempP == None:
+            res.append(tempP.val)
+            tempP = tempP.next
+            
+        return res
+    
     def show(self):
         tempP = self.head
         print '-------'
